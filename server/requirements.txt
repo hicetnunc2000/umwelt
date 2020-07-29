@@ -1,0 +1,5 @@
+flask
+Flask-Cors==1.10.3
+ipfshttpclient
+#libp2p
+owlready2
