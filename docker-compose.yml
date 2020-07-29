@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+    ipfs:
+        image: ipfs/go-ipfs:latest
+        container_name: ipfs
+        #network_mode: host
+        ports:
+            - 5001:5001
+            - 4001:4001
+            - 8080:8080
+        restart: always
+
+    flask:
+        build: ./flask
+        container_name: flask
+        network_mode: host
+        expose:
+            - 5000
+        ports:
+            - 5000:5000
+        volumes:
+            - ./flask:/usr/src/app
+        environment:
+            - FLASK_ENV=development
+            - FLASK_APP=app.py
+            - FLASK_DEBUG=1
+        depends_on: 
+            - ipfs
+        restart: always
+            
+    react:
+        build: ./react
+        container_name: react
+        #network_mode: host
+        tty: true
+        volumes:
+            - ./react/:/usr/src/app
+            - /usr/src/app/node_modules
+        ports:
+            - 3000:3000
+        depends_on: 
+            - flask
+        restart: always
+        links:
+            - flask
+
+#    proxy:
+#        build: ./nginx
+#        depends_on:
+#            - react
+#            - flask
+#            - ipfs
+#        ports:
+#            - "8080:80"
+#        restart: always

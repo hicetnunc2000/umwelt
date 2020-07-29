@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://127.0.0.1:8000/gott2.owl"
+         xmlns="http://127.0.0.1:8000/gott2.owl#">
+
+<owl:Ontology rdf:about="http://127.0.0.1:8000/gott2.owl"/>
+
+<owl:ObjectProperty rdf:about="#has_description">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Description"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_topic">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Topic"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_CID">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:domain rdf:resource="#Topic"/>
+  <rdfs:range rdf:resource="#CID"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_Seqno">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Seqno"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_tags">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Tags"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_author">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Author"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_date">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Date"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Pub">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Description">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Topic">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CID">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Seqno">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tags">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Author">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Date">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<Pub rdf:about="#A%20Thousand%20Plateaus">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Deleuze%20and%20Guattari%20Book"/>
+  <has_CID rdf:resource="#QmWCpZXGECFmwyoySt86LkJduE275iMffsNu6dFZ8q23h4"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-07-20%2019%3A10%3A24"/>
+</Pub>
+
+<Description rdf:about="#Deleuze%20and%20Guattari%20Book">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#QmWCpZXGECFmwyoySt86LkJduE275iMffsNu6dFZ8q23h4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Tags rdf:about="#Philosophy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Tags>
+
+<Date rdf:about="#2020-07-20%2019%3A10%3A24">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Date rdf:about="#2020-07-20%2019%3A06%3A05">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Description rdf:about="#Deleuze%20and%20Guattari%20book">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<Date rdf:about="#2020-07-20%2017%3A44%3A33">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Date rdf:about="#2020-07-20%2018%3A02%3A29">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#Estetica%20de%20la%20desaparicion">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Paul%20Virilio%20Book%20Espanol"/>
+  <has_CID rdf:resource="#QmcanUHp56oYxajrFHiW8hprkxt3WKTKyDCMnCcCQDRX1g"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-07-20%2019%3A13%3A08"/>
+</Pub>
+
+<Description rdf:about="#Paul%20Virilio%20Book%20Espanol">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#QmcanUHp56oYxajrFHiW8hprkxt3WKTKyDCMnCcCQDRX1g">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Date rdf:about="#2020-07-20%2019%3A13%3A08">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#The%20Mathematical%20Theory%20of%20Computation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Claude%20Shannon%27s%20book"/>
+  <has_CID rdf:resource="#QmSrHT863pxfKovRiuGbRxEKj1RJ33T9gqBxwDqikY2vkS"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-07-20%2021%3A25%3A10"/>
+</Pub>
+
+<Description rdf:about="#Claude%20Shannon%27s%20book">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#QmSrHT863pxfKovRiuGbRxEKj1RJ33T9gqBxwDqikY2vkS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Date rdf:about="#2020-07-20%2021%3A25%3A10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#for-machine-use-only-contemplations-on-algorithmic-epistemology">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#mohammad-salemy-ed"/>
+  <has_CID rdf:resource="#QmTyyVSqjx8bzgwoFjZWVnWmjGKYNtWGw4etzJp35xphyw"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-07-20%2021%3A29%3A06"/>
+</Pub>
+
+<Description rdf:about="#mohammad-salemy-ed">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<Date rdf:about="#2020-07-20%2021%3A29%3A06">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<CID rdf:about="#QmTyyVSqjx8bzgwoFjZWVnWmjGKYNtWGw4etzJp35xphyw">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Pub rdf:about="#An%20Introduction%20toBitcoin%20and%20Philosophy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Nick%20Land"/>
+  <has_CID rdf:resource="#QmSUSLgZhPzhFpbjgD5KsKKYg4pmqAqHBzuDTtyVohY7JL"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-07-20%2021%3A33%3A47"/>
+</Pub>
+
+<Description rdf:about="#Nick%20Land">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<Date rdf:about="#2020-07-20%2021%3A33%3A47">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<CID rdf:about="#QmSUSLgZhPzhFpbjgD5KsKKYg4pmqAqHBzuDTtyVohY7JL">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+
+</rdf:RDF>
