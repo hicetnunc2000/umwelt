@@ -4,19 +4,19 @@ services:
     ipfs:
         image: ipfs/go-ipfs:latest
         container_name: ipfs
-        #network_mode: host
         ports:
             - 5001:5001
             - 4001:4001
             - 8080:8080
         restart: always
-
+#        networks:
+#            - net
     flask:
         build: ./flask
         container_name: flask
         network_mode: host
-        expose:
-            - 5000
+        #expose:
+        #    - 5000
         ports:
             - 5000:5000
         volumes:
@@ -28,7 +28,9 @@ services:
         depends_on: 
             - ipfs
         restart: always
-            
+#        net: host
+#        networks:
+#            - net
     react:
         build: ./react
         container_name: react
@@ -44,6 +46,12 @@ services:
         restart: always
         links:
             - flask
+#        networks:
+#           - net
+    
+#networks:
+#    net:
+#        driver: bridge
 
 #    proxy:
 #        build: ./nginx

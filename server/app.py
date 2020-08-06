@@ -2,7 +2,7 @@ from flask import Flask, request, make_response
 from flask_cors import CORS, cross_origin
 #from flask_pymongo import PyMongo
 from ipfs import IPFS, Onto
-
+import threading
 #import pymongo
 import os
 import json
@@ -14,6 +14,7 @@ cors = CORS(app)
 ipfs = IPFS()
 onto = Onto()
 
+ipfs.insert_topic('ontology')
 #mongo = PyMongo(app)
 
 @app.route('/uploads', methods=['POST'])
@@ -48,8 +49,12 @@ def upload_file():
     if request.method == 'POST':
 
         obj = {}
+
         req = request.form.to_dict(flat=False)
         req = json.loads(req['state'][0])
+
+        print(req)
+        
         obj['title'] = req['title']
         obj['description'] = req['description']
         obj['tags'] = req['tags']
@@ -59,10 +64,10 @@ def upload_file():
             file = open(path, "wb")
             file.write(request.files[e].read())
             file.close()
-            obj['cid'] = ipfs.add(path)
+            obj['file_cid'] = ipfs.add(path)
         print(obj)
         cid = ipfs.add_json(obj)
-        obj['cid_json'] = cid
+        obj['json_cid'] = cid
         ipfs.insert_json_into_topic('Philosophy', cid)
         #ipfs.publish('Philosophy', obj)
         onto.insert_pub(obj)
@@ -72,45 +77,37 @@ def upload_file():
 
 @app.route('/feed', methods=['GET'])
 def feed():
-
+    """ 
+    gets latests ontologies entries
+    """
     res = ipfs.get_dir_jsons('Philosophy')
     return { 'res' : res }
 
 @app.route('/ontology', methods=['GET'])
 def ontology():
+    """  
+    gets ontology hash
+    """
     res = ipfs.client.files.stat('/ontology/gott')['Hash']
     return {'res' : res }
 
 @app.route('/search', methods=['POST'])
 def search():
+    """ 
+    search for a term
+    """
     res = onto.search()
     return { 'res' : res }
 
-@app.route('/login', methods=['POST'])
-def login():
-    """ 
-    check for login credentials (simple)
-    """
-    pass
-
-@app.route('/register', methods=['POST', 'OPTIONS'])
+@app.route('/pubsub', methods=['POST'])
 @cross_origin(origin='*')
 def register():
     """ 
-    register user (simple)
+    insert data from ipfs pubsub (receives requests from listener service)
     """
-    
+    print(request.data)
     res = 'test'
     return { 'res' : res }
-
-
-
-def _build_cors_prelight_response():
-    response = make_response()
-    response.headers.add("Access-Control-Allow-Origin", "*")
-    response.headers.add('Access-Control-Allow-Headers', "*")
-    response.headers.add('Access-Control-Allow-Methods', "*")
-    return response
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

@@ -1,0 +1,8 @@
+body {
+    font-family: monospace;
+}
+
+#center {
+    margin-left: auto;
+    margin-right: auto;
+}

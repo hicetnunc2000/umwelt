@@ -1,0 +1,7 @@
+
+SELECT ?cid
+            WHERE {
+  			OPTIONAL { ?subject <http://127.0.0.1:8000/umwelt.owl#has_CID> ?object. }
+  			BIND (STRAFTER(STR(?date), 'http://127.0.0.1:8000/umwelt.owl#') AS ?dateLabel) .
+  			BIND (STRAFTER(STR(?object), 'http://127.0.0.1:8000/umwelt.owl#') AS ?cid) .
+} ORDER BY DESC(?dateLabel)

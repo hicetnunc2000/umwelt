@@ -44,4 +44,4 @@ EXPOSE 8081
 
 ENTRYPOINT ipfs
 # Execute the daemon subcommand by default
-CMD ["daemon"]
+CMD ["daemon", "--enable-pubsub-experiment"]

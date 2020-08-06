@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://127.0.0.1:8000/umwelt.owl"
+         xmlns="http://127.0.0.1:8000/umwelt.owl#">
+
+<owl:Ontology rdf:about="http://127.0.0.1:8000/umwelt.owl"/>
+
+<owl:ObjectProperty rdf:about="#has_description">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Description"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_topic">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Topic"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_file_CID">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#CID"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_json_CID">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#CID"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_Seqno">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Seqno"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_tags">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Tags"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_author">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Author"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_date">
+  <rdfs:domain rdf:resource="#Pub"/>
+  <rdfs:range rdf:resource="#Date"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Pub">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Description">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Topic">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CID">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Seqno">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tags">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Author">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Date">
+  <rdfs:subClassOf rdf:resource="#Pub"/>
+</owl:Class>
+
+<Pub rdf:about="#Chasm">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Nick%20Land"/>
+  <has_file_CID rdf:resource="#QmaFpuoMVT3knXZ4YmXcNcokvfodxnr5524EwxcsFh3f9n"/>
+  <has_json_CID rdf:resource="#QmQ85LQkAcXgTcZuJSmHrNdpowy2L1vAefDyPKwXAajGgW"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-08-04%2023%3A19%3A57"/>
+</Pub>
+
+<Description rdf:about="#Nick%20Land">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#QmaFpuoMVT3knXZ4YmXcNcokvfodxnr5524EwxcsFh3f9n">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmQ85LQkAcXgTcZuJSmHrNdpowy2L1vAefDyPKwXAajGgW">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Tags rdf:about="#Philosophy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Tags>
+
+<Date rdf:about="#2020-08-04%2023%3A19%3A57">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Date rdf:about="#2020-08-04%2023%3A18%3A40">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#Fanged%20Noumena">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Nick%20Land"/>
+  <has_file_CID rdf:resource="#QmYD2xveqa4qaGVCD6exHfGBbtz2v5qT8SU82jftq4WfaU"/>
+  <has_json_CID rdf:resource="#QmcETNLtaE4ZaCngMbhfNrm2FoCpZM5w44p5gBrxtGLi8G"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-08-05%2022%3A55%3A43"/>
+</Pub>
+
+<CID rdf:about="#QmYD2xveqa4qaGVCD6exHfGBbtz2v5qT8SU82jftq4WfaU">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmcETNLtaE4ZaCngMbhfNrm2FoCpZM5w44p5gBrxtGLi8G">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Date rdf:about="#2020-08-05%2022%3A55%3A43">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#Platform%20Capitalism">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Nick%20Srnicek"/>
+  <has_file_CID rdf:resource="#QmXFnb39rnSmLpDJKUwqCrKw5AV4ScjxAz7hdjSuf8mUse"/>
+  <has_json_CID rdf:resource="#QmdKijJ1qT1JbnMwr4TzGJnSobviSwYQ1dSoSYL2p1jEq8"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-08-05%2023%3A35%3A48"/>
+</Pub>
+
+<Description rdf:about="#Nick%20Srnicek">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#QmXFnb39rnSmLpDJKUwqCrKw5AV4ScjxAz7hdjSuf8mUse">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmdKijJ1qT1JbnMwr4TzGJnSobviSwYQ1dSoSYL2p1jEq8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Date rdf:about="#2020-08-05%2023%3A35%3A48">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#Speculative%20Aesthetics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Robin%20Mackay"/>
+  <has_file_CID rdf:resource="#QmUWo24d9zD31MBMf3UxMfpWmAJVa27HSddNxivLUsfUvS"/>
+  <has_json_CID rdf:resource="#QmRNNj2xnijsi8nbKsco8jTALAoCrGtS949e9jG3hYQ91j"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-08-06%2000%3A57%3A19"/>
+</Pub>
+
+<Description rdf:about="#Robin%20Mackay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#QmUWo24d9zD31MBMf3UxMfpWmAJVa27HSddNxivLUsfUvS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmRNNj2xnijsi8nbKsco8jTALAoCrGtS949e9jG3hYQ91j">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Date rdf:about="#2020-08-06%2000%3A57%3A19">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#K-punk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Mark%20Fisher"/>
+  <has_file_CID rdf:resource="#QmehPGinEAq24Jgm2wZodzRWnxcrJqsxeYR4bvg7Pa6BE5"/>
+  <has_json_CID rdf:resource="#QmTdCz37ypCo2CvYs6Zk4aUTSZtSpZE1JiRiHGk13aKraL"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-08-06%2000%3A58%3A51"/>
+</Pub>
+
+<Description rdf:about="#Mark%20Fisher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#QmehPGinEAq24Jgm2wZodzRWnxcrJqsxeYR4bvg7Pa6BE5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmTdCz37ypCo2CvYs6Zk4aUTSZtSpZE1JiRiHGk13aKraL">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Date rdf:about="#2020-08-06%2000%3A58%3A51">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#Network%20Society">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Steven%20Shaviro"/>
+  <has_file_CID rdf:resource="#QmTPib1ViZhgBPcyh7aodVGeMEEzvMZ4zziwg8cuBxdRRP"/>
+  <has_json_CID rdf:resource="#Qmf2BBLbEQSRth3n19gjnKb9nh1HwbbipWXCQijtYZ9LND"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-08-06%2001%3A02%3A43"/>
+</Pub>
+
+<Description rdf:about="#Steven%20Shaviro">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#QmTPib1ViZhgBPcyh7aodVGeMEEzvMZ4zziwg8cuBxdRRP">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#Qmf2BBLbEQSRth3n19gjnKb9nh1HwbbipWXCQijtYZ9LND">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Date rdf:about="#2020-08-06%2001%3A02%3A43">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#Empire">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Antonio%20Negri"/>
+  <has_file_CID rdf:resource="#QmdRrHDFCY5wvRVmF8Ca5Tgn9ah8CqXZui7fo4D8a9DRXm"/>
+  <has_json_CID rdf:resource="#QmQ5WMrHY2nxMJnvRMCCmSLasRL2n7VESfweby3SnryGuH"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-08-06%2001%3A04%3A48"/>
+</Pub>
+
+<Description rdf:about="#Antonio%20Negri">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#QmdRrHDFCY5wvRVmF8Ca5Tgn9ah8CqXZui7fo4D8a9DRXm">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmQ5WMrHY2nxMJnvRMCCmSLasRL2n7VESfweby3SnryGuH">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Date rdf:about="#2020-08-06%2001%3A04%3A48">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#Gaming%20Essays%20on%20Algorithmic%20Culture">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Alexander%20R%20Galloway"/>
+  <has_file_CID rdf:resource="#Qmdu8xDNRjdhFEEyidbFFse3DRKLDESk7EFD9MWSP1U1QE"/>
+  <has_json_CID rdf:resource="#QmegNm5d1fJ1EKxFZkN2hBvv8AFw6GxM1M75poxQdVuY4G"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-08-06%2001%3A06%3A12"/>
+</Pub>
+
+<Description rdf:about="#Alexander%20R%20Galloway">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#Qmdu8xDNRjdhFEEyidbFFse3DRKLDESk7EFD9MWSP1U1QE">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmegNm5d1fJ1EKxFZkN2hBvv8AFw6GxM1M75poxQdVuY4G">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Date rdf:about="#2020-08-06%2001%3A06%3A12">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#The%20mathematical%20theory%20of%20communication">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Claude%20Shannon"/>
+  <has_file_CID rdf:resource="#QmSrHT863pxfKovRiuGbRxEKj1RJ33T9gqBxwDqikY2vkS"/>
+  <has_json_CID rdf:resource="#QmPKfjyY1jmTywN2EudzTvwMikUR5pWQAGPpZYPCdC16y2"/>
+  <has_tags rdf:resource="#Mathematics%20Philosophy"/>
+  <has_date rdf:resource="#2020-08-06%2001%3A16%3A09"/>
+</Pub>
+
+<Description rdf:about="#Claude%20Shannon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<CID rdf:about="#QmSrHT863pxfKovRiuGbRxEKj1RJ33T9gqBxwDqikY2vkS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmPKfjyY1jmTywN2EudzTvwMikUR5pWQAGPpZYPCdC16y2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Tags rdf:about="#Mathematics%20Philosophy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Tags>
+
+<Date rdf:about="#2020-08-06%2001%3A16%3A09">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Pub rdf:about="#Accelerate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Robin%20Mackay%20ed."/>
+  <has_file_CID rdf:resource="#QmToPx3GMWvxfi1gVZTu1rahDNbB4TU1BhF2ZS3EPZhumq"/>
+  <has_json_CID rdf:resource="#QmUDiosbia7uEkEuusjAsV3uE1rLtMYUVv418moeqjn4yv"/>
+  <has_tags rdf:resource="#Philosophy%20Cybernetics"/>
+  <has_date rdf:resource="#2020-08-06%2003%3A39%3A50"/>
+</Pub>
+
+<Description rdf:about="#Robin%20Mackay%20ed.">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Description>
+
+<Date rdf:about="#2020-08-06%2003%3A39%3A50">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<Tags rdf:about="#Philosophy%20Cybernetics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Tags>
+
+<CID rdf:about="#QmToPx3GMWvxfi1gVZTu1rahDNbB4TU1BhF2ZS3EPZhumq">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmUDiosbia7uEkEuusjAsV3uE1rLtMYUVv418moeqjn4yv">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Pub rdf:about="#Dark%20Enlightnment">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Nick%20Land"/>
+  <has_file_CID rdf:resource="#QmYHBrjruTBkdtRFmkfa2M3RmVxRYSuZ8NSkDjnq7XZmVb"/>
+  <has_json_CID rdf:resource="#QmRBF1cNzZ6xTruzJ7cMv112wHR1eYVJ5RFPDqnDq947RJ"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-08-06%2004%3A17%3A10"/>
+</Pub>
+
+<Date rdf:about="#2020-08-06%2004%3A17%3A10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<CID rdf:about="#QmYHBrjruTBkdtRFmkfa2M3RmVxRYSuZ8NSkDjnq7XZmVb">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmRBF1cNzZ6xTruzJ7cMv112wHR1eYVJ5RFPDqnDq947RJ">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<Pub rdf:about="#Cryptocurrent%20Bitcoin%20and%20Philosophy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <has_description rdf:resource="#Nick%20Land"/>
+  <has_file_CID rdf:resource="#QmSUSLgZhPzhFpbjgD5KsKKYg4pmqAqHBzuDTtyVohY7JL"/>
+  <has_json_CID rdf:resource="#QmaVA48pzTfBUrabpXArYgnZhkb61As4LmFwqp3DKwe93h"/>
+  <has_tags rdf:resource="#Philosophy"/>
+  <has_date rdf:resource="#2020-08-06%2004%3A22%3A29"/>
+</Pub>
+
+<Date rdf:about="#2020-08-06%2004%3A22%3A29">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Date>
+
+<CID rdf:about="#QmSUSLgZhPzhFpbjgD5KsKKYg4pmqAqHBzuDTtyVohY7JL">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+<CID rdf:about="#QmaVA48pzTfBUrabpXArYgnZhkb61As4LmFwqp3DKwe93h">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CID>
+
+
+</rdf:RDF>

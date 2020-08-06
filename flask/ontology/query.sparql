@@ -1,0 +1,18 @@
+        SELECT DISTRINCT ?cid
+            WHERE {
+            OPTIONAL {?subject <http://127.0.0.1:8000/umwelt.owl#has_json_CID> ?object.}
+            OPTIONAL {?subject  <http://127.0.0.1:8000/umwelt.owl#has_description> ?description.}
+            OPTIONAL {?subject  <http://127.0.0.1:8000/umwelt.owl#has_tags> ?tags.}
+            OPTIONAL {?subject  <http://127.0.0.1:8000/umwelt.owl#has_date> ?date.}
+            
+            BIND (STR(?subject) AS ?s) .
+            BIND (STR(?tags) AS ?t) .
+            BIND (STR(?description) AS ?d) .
+
+            OPTIONAL { FILTER CONTAINS ( LCASE(?s) , ENCODE_FOR_URI('{0}'))} .
+            OPTIONAL { FILTER CONTAINS ( LCASE(?t) , ENCODE_FOR_URI('{0}'))} .
+            OPTIONAL { FILTER CONTAINS ( LCASE(?d) , ENCODE_FOR_URI('{0}'))} .
+
+            BIND (STRAFTER(STR(?object), 'http://127.0.0.1:8000/umwelt.owl#') AS ?cid) .
+
+            }
